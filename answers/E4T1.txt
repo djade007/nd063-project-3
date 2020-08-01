@@ -6,3 +6,4 @@
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
 - Using S3 bucket policy we can enforce encryption and also restrict access to a specific IAM Role.
+For example a new role can be created specifically for accessing the S3 bucket and be assigned to the admin.

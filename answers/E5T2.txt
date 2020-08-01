@@ -1,19 +1,36 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
-CloudFormation Template Scanner - https://www.cloudconformity.com/solutions/aws/cloudformation-template-scanner.html
+- CloudFormation Template Scanner - https://www.cloudconformity.com/solutions/aws/cloudformation-template-scanner.html
+- Cloudsploit - https://cloudsploit.com/cloudformation
+- Cfripper - https://github.com/Skyscanner/cfripper
 
 ### Example vulnerability
-Bucket S3Bucket allows public 'READ' access.
+- Configuration of very permissive security groups
+- Change in the encryption of a database
+- Wrong assignment to AWS Role on a resource
 
 ##Scan AMI’s or containers for OS vulnerabilities
-Clair - https://github.com/quay/clair
+- Clair - https://github.com/quay/clair
+- Anchore - https://anchore.com
+- Trivy - https://github.com/aquasecurity/trivy
 
 ### Example vulnerability
-CVE-2017-12424: [High]
+- Libraries outdates vulnerabilities
+- OS outated version vulnerabilities
+- Permissive system configurations for outside connections
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
-AWS inspector
+- AWS inspector
+- AWS Config
+- AWS Security Hub
+- Cloudwatch alarms
+- Cloudtrail
+- AWS Guard Duty
 
 ### Example vulnerability
-Instances configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key.
+- Instances configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key.
+- Accounts without MFA policies
+- Very permissive IAM Policies or Roles
+- Credentials without rotation policies
+- Poor password rules
