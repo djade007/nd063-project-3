@@ -1,0 +1,15 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- Moving the web application instance to the private subnet with a NAT Gateway can reduce the internet facing attack.
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- Creating a VPC private endpoints could help but it doesn't deny all access from outside the endpoint.
+    If a user from the same account is authenticated, this policy still allows the user to access the bucket from outside the VPC endpoint.
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- No. Enabling default encryption doesn't change the encryption of objects that are already in the bucket.
+    After you enable default encryption, the encryption that you set applies only to future uploads.
+    To change the encryption of an existing object to SSE-KMS, you must re-upload the object. Or, you can copy the object over itself.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+The configurations would be reset to the initial cloudformation values.

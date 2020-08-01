@@ -1,0 +1,12 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+- S3 buckets should have server-side encryption enabled.
+- Attached EBS volumes should be encrypted at-rest
+- VPC flow logging should be enabled in all VPCs
+- Application Load Balancer should be configured to redirect all HTTP requests to HTTPS
+- EC2 instances should be managed by AWS Systems Manager
+
+Bonus
+- provide recommendations on how to remediate the vulnerabilities.
+- Enable Server Side encryption on the EC2 EBS storage and both S3 Buckets.
+- Create a IAM Role Policy to allow access to the EC2 instances through AWS Session Manager.

@@ -1,0 +1,19 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+CloudFormation Template Scanner - https://www.cloudconformity.com/solutions/aws/cloudformation-template-scanner.html
+
+### Example vulnerability
+Bucket S3Bucket allows public 'READ' access.
+
+##Scan AMI’s or containers for OS vulnerabilities
+Clair - https://github.com/quay/clair
+
+### Example vulnerability
+CVE-2017-12424: [High]
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+AWS inspector
+
+### Example vulnerability
+Instances configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key.

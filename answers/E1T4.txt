@@ -1,0 +1,19 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access 
+the application web service, identify at least 2 obvious poor practices as it relates to security. 
+List these 2 practices, and a justification for your choices, in the text file named E1T4.txt.
+
+
+#1
+The assumed role for the web service grants all s3 actions,
+this is poor a choice because all s3 buckets on the account can be accessed and all files can be replaced
+which makes it susceptible to ransomeware.
+
+#2 There was no type of encryption on the secret recipe bucket, the secret recipe content can be read
+by anyone with any type of access to the account.
+
+#3
+The security group on the web service instance (WebAppSG) allows ingress traffic
+from the internet to the web service instance on
+ports 22, 80 and 5000 and allow all egress traffic from the server,
+even though the server is behind a load balancer. This still exposes the instance to any form of attack
+from the internet.

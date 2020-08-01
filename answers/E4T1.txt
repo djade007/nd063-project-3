@@ -1,0 +1,8 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+- Making changes to the web instance security group to only allow connection from the Load Balancer Group security group and also disable port 22.
+
+- Provision access the instance through AWS Session Manager if SSH access is needed.
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Using S3 bucket policy we can enforce encryption and also restrict access to a specific IAM Role.
